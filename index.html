@@ -14,11 +14,11 @@
     }
     .buttons {
       background:black;
+      display: flex;
     }
     .video-player {
       width: 100%;
       height: 100%;
-      flex-grow: 1;
     }
     .button {
       border-style: none;
@@ -29,6 +29,9 @@
     }
     .fa {
       color: white;
+    }
+    .space {
+      flex-grow: 1;
     }
   </style>
 </head>
@@ -41,7 +44,8 @@
       <button class="js-pause-button button"><i class="fa fa-pause" hidden></i></button>
       <button class="js-mute-button button"><i class="fa fa-volume-up"></i></button>
       <button class="js-volume-button button"><i class="fa fa-volume-off"></i></button>
-    </div>
+      <div class="space"></div>
+      <button class="js-fullscreen-button button"><i class="fa fa-expand" aria-hidden="true"></i></button></div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
