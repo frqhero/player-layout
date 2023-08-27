@@ -4,6 +4,9 @@
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style type="text/css">
     .player {
       width: 800px;
@@ -15,6 +18,7 @@
     .buttons {
       background:black;
       display: flex;
+      align-items: baseline;
     }
     .video-player {
       width: 100%;
@@ -25,7 +29,7 @@
       cursor: pointer;
       background-color: transparent;
       font-size: 20px;
-      margin: 1px 1px 4px;
+      margin: 1px 0px 4px;
       color: white;
       height: 35px;
       width: 35px;
@@ -40,12 +44,19 @@
     <div class="js-video-container video-player"></div>
     <!-- Here can be placed player controls: play and volume buttons -->
     <div class="buttons">
-      <button class="js-play-button button"><i class="fa fa-play" hidden></i></button>
-      <button class="js-pause-button button"><i class="fa fa-pause" hidden></i></button>
-      <button class="js-mute-button button"><i class="fa fa-volume-up"></i></button>
-      <button class="js-volume-button button"><i class="fa fa-volume-off"></i></button>
-      <div class="space"></div>
-      <button class="js-fullscreen-button button"><i class="fa fa-expand" aria-hidden="true"></i></button></div>
+      <div>
+        <button class="js-play-button button"><i class="fa fa-play" hidden></i></button>
+        <button class="js-pause-button button"><i class="fa fa-pause" hidden></i></button>
+        <button class="js-mute-button button"><i class="fa fa-volume-up"></i></button>
+        <button class="js-volume-button button"><i class="fa fa-volume-off"></i></button>
+      </div>
+      <div class="space" style="color: white; font-family: 'Roboto'; display: flex;">
+        <div class="js-current-time"></div>
+        <div class="space"></div>
+        <div class="js-duration"></div>
+      </div>
+      <button class="js-fullscreen-button button"><i class="fa fa-expand" aria-hidden="true"></i></button>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
