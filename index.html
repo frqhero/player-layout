@@ -36,6 +36,25 @@
     }
     .space {
       flex-grow: 1;
+      align-items: center;
+    }
+    .progress-slider {
+      height: 5px;
+      border-radius: 30px;
+    }
+    .progress {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border-color: white;
+      border-width: 3px;
+      border-style: solid;
     }
   </style>
 </head>
@@ -52,10 +71,15 @@
       </div>
       <div class="space" style="color: white; font-family: 'Roboto'; display: flex;">
         <div class="js-current-time"></div>
-        <div class="space"></div>
+        <div class="space">
+          <div class="js-progress progress" style="background-color: black;">
+            <div class="js-progress-slider progress-slider" style="background-color: red;"></div>
+          </div>
+        </div>
         <div class="js-duration"></div>
       </div>
       <button class="js-fullscreen-button button"><i class="fa fa-expand" aria-hidden="true"></i></button>
+      <span class="dot"></span>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
