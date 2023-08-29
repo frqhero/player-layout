@@ -41,6 +41,7 @@
     .progress-slider {
       height: 5px;
       border-radius: 30px;
+      flex: 1;
     }
     .progress {
       margin-left: 12px;
@@ -55,6 +56,17 @@
       border-color: white;
       border-width: 3px;
       border-style: solid;
+      flex: 1;
+    }
+    .time-progress {
+      color: white;
+      font-family: 'Roboto';
+      display: flex;
+      flex-grow: 1;
+    }
+    .progress-bar-and-dot {
+      flex-grow: 1;
+      display: flex;
     }
   </style>
 </head>
@@ -63,23 +75,26 @@
     <div class="js-video-container video-player"></div>
     <!-- Here can be placed player controls: play and volume buttons -->
     <div class="buttons">
-      <div>
+      <div class="play-pause">
         <button class="js-play-button button"><i class="fa fa-play" hidden></i></button>
         <button class="js-pause-button button"><i class="fa fa-pause" hidden></i></button>
+      </div>
+      <div class="volume-mute">
         <button class="js-mute-button button"><i class="fa fa-volume-up"></i></button>
         <button class="js-volume-button button"><i class="fa fa-volume-off"></i></button>
       </div>
-      <div class="space" style="color: white; font-family: 'Roboto'; display: flex;">
+      <div class="time-progress">
         <div class="js-current-time"></div>
-        <div class="space">
-          <div class="js-progress progress" style="background-color: black;">
+        <div class="progress-bar-and-dot">
+          <div class="progress js-progress space" style="background-color: black;">
             <div class="js-progress-slider progress-slider" style="background-color: red;"></div>
+            <span class="dot"></span>
           </div>
         </div>
         <div class="js-duration"></div>
       </div>
       <button class="js-fullscreen-button button"><i class="fa fa-expand" aria-hidden="true"></i></button>
-      <span class="dot"></span>
+
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
